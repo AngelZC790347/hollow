@@ -4,8 +4,8 @@ const Search = () => {
         console.log(value)
     }
     return (
-        <div className="mr-16 px-56">
-        <input type="search"  placeholder="Some Movie" className="bg-slate-800 w-full px-5 py-2 "  onChange={(e)=>handleChange(e.target.value)}/>
+        <div className="text-center">
+        <input type="search"  placeholder="Some Movie" className="w-3/5 bg-slate-800 w-full px-5 py-2 "  onChange={(e)=>handleChange(e.target.value)}/>
         </div>    
     )
 };
