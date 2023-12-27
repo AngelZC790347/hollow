@@ -5,7 +5,7 @@ const Search = () => {
     }
     return (
         <div className="text-center">
-        <input type="search"  placeholder="Some Movie" className="w-3/5 bg-slate-800 w-full px-5 py-2 "  onChange={(e)=>handleChange(e.target.value)}/>
+        <input type="search"  placeholder="Some Movie" className="w-3/5 bg-slate-800  px-5 py-2 "  onChange={(e)=>handleChange(e.target.value)}/>
         </div>    
     )
 };

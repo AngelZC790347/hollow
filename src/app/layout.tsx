@@ -25,7 +25,7 @@ export default function RootLayout({
             <Link href={'./'}>Generos</Link>
           </ul>
         </nav>
-        <div >
+        <div className='my-16'>
           <Search></Search>
         </div>
         {children}
