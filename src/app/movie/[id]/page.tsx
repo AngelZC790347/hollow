@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 import movies from '../../../../mock/Movies.json'
 import { PlayButton } from '@/app/ui/buttons'
 export default function Page({params}:{params:{id:number}}) {
@@ -10,7 +11,7 @@ export default function Page({params}:{params:{id:number}}) {
         <div>
         <h1 className='text-3xl text-center underline'>{movie.title}</h1>
         <div className='my-9 px-48 flex flex-row'>
-            <img width={200} src={"https://image.tmdb.org/t/p/original"+movie.poster_path} alt={`poster movie ${movie.title}`}></img>
+            <Image width={200} height={500} src={"https://image.tmdb.org/t/p/original"+movie.poster_path} alt={`poster movie ${movie.title}`}></Image>
             <div className='px-12'>
                 <p>{movie.overview}</p>
                 <span className='my-11 block mx-16'><PlayButton></PlayButton></span>                
