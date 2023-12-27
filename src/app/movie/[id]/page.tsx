@@ -6,7 +6,7 @@ import { PlayButton } from '@/app/ui/buttons'
 export default function Page({params}:{params:{id:number}}) {
     const movie = movies.filter(m=>m.id == params.id)[0]
     const [isOnBillboard,setBillboard] = useState(true)
-    fetch(`https://hollow-videos.b-cdn.net/${movie.id}.mp4`).then(r=>setBillboard(r.status==200)).catch(err=>setBillboard(false))    
+    // fetch(`https://hollow-videos.b-cdn.net/${movie.id}.mp4`,{mode:"no-cors"}).then(r=>setBillboard(r.status==200)).catch(err=>setBillboard(false))    
     return (
         <div>
         <h1 className='text-3xl text-center underline'>{movie.title}</h1>
