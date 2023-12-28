@@ -1,5 +1,4 @@
 import movies from "@/../mock/Movies.json"
-import { NOTFOUND } from "dns"
 import { createReadStream, existsSync } from "fs"
 function iteratorToStream(iterator: any) {
   return new ReadableStream({
