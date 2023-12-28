@@ -9,7 +9,7 @@ const theme = createTheme({
       mode:"dark"
     }
   })
-const PaginationNav = (props:{pageCount:number}) => {
+export function PaginationNav  (props:{pageCount:number}){
   return (
     <div>
        <aside  className="my-7 text-clip text-white flex flex-row justify-center w-full">    
