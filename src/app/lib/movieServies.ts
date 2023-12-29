@@ -7,8 +7,8 @@ export async function getOnBillBoardMovies({query="",page}:{query:string,page:nu
     }).then(text=>text.json())) 
     return data["results"] as [Movie]
 }
-export async function getPopularMovies() {
-    let data = await (fetch(TMBDB_ENDPOINT.baseURL+"movie/popular",{
+export async function getPopularMovies(page:number) {
+    let data = await (fetch(TMBDB_ENDPOINT.baseURL+`movie/popular?page=${page}`,{
         headers:TMBDB_ENDPOINT.authHeader,
         method:'GET'
     }).then(text=>text.json()))   
@@ -29,8 +29,8 @@ export async function getImageMovieFromPath(imagePath:string) {
     return stream   
 }
 //'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=10402'
-export async function getMoviesByGender(id:number){
-    let data = await (fetch(TMBDB_ENDPOINT.baseURL+`discover/movie?include_adult=false&include_0video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`,{
+export async function getMoviesByGender(id:number,page:number){
+    let data = await (fetch(TMBDB_ENDPOINT.baseURL+`discover/movie?include_adult=false&include_0video=false&language=en-US&page=${page}&sort_by=popularity.desc&with_genres=${id}`,{
         headers:TMBDB_ENDPOINT.authHeader,        
     }).then(text=>text.json()))   
     return data["results"] as [Movie]
